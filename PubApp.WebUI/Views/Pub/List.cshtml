@@ -1,0 +1,17 @@
+﻿@using PubApp.Domain.Entities
+@model IEnumerable<Pub>
+@{
+    ViewBag.Title = "Pubs";
+}
+
+@foreach (var p in Model)
+{
+    <div>
+        <h3>@p.Name</h3>
+        <span>Category: @p.Category</span>
+        <p>Description: @p.Description</p>
+        <h4>Rating: @p.Rating.ToString()</h4>
+        <br />
+    </div>
+}
+
