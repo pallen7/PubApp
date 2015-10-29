@@ -1,10 +1,11 @@
-﻿@using PubApp.Domain.Entities
-@model IEnumerable<Pub>
+﻿@using PubApp.WebUI.HtmlHelpers
+@using PubApp.Domain.Entities
+@model PubApp.WebUI.Models.PubsListViewModel
 @{
     ViewBag.Title = "Pubs";
 }
 
-@foreach (var p in Model)
+@foreach (var p in Model.Pubs)
 {
     <div>
         <h3>@p.Name</h3>
@@ -14,4 +15,8 @@
         <br />
     </div>
 }
+
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x}))
+</div>
 

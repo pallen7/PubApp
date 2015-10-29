@@ -102,6 +102,8 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebUI\Controllers\PubControllerTests.cs" />
+    <Compile Include="WebUI\HtmlHelpers\PagingHelperTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -116,6 +118,9 @@
       <Project>{33e0a28d-b896-4f09-8cd0-85aebacc77a5}</Project>
       <Name>PubApp.WebUI</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
