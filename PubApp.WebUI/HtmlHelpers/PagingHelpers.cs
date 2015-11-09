@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace PubApp.WebUI.HtmlHelpers
 {
-    public static class PagingHelper
+    public static class PagingHelpers
     {
         public static MvcHtmlString PageLinks(this HtmlHelper html, PagingInfo pagingInfo, Func<int,string> pageUrl)
         {

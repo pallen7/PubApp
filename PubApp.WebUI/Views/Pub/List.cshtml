@@ -1,22 +1,13 @@
-﻿@using PubApp.WebUI.HtmlHelpers
-@using PubApp.Domain.Entities
+﻿@using PubApp.Domain.Entities
+@using PubApp.WebUI.HtmlHelpers
 @model PubApp.WebUI.Models.PubsListViewModel
-@{
-    ViewBag.Title = "Pubs";
-}
+@{ ViewBag.Title = "Pubs";}
 
 @foreach (var p in Model.Pubs)
 {
-    <div>
-        <h3>@p.Name</h3>
-        <span>Category: @p.Category</span>
-        <p>Description: @p.Description</p>
-        <h4>Rating: @p.Rating.ToString()</h4>
-        <br />
-    </div>
+    @Html.Partial("PubSummary",p)
 }
 
-<div>
-    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x}))
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
 </div>
-

@@ -32,15 +32,6 @@ namespace PubApp.WebUI.Infrastructure
         private void AddBindings()
         {
             kernel.Bind<IPubRepository>().To<PubRepository>();
-            
-            //Mock<IPubRepository> mock = new Mock<IPubRepository>();
-            //mock.Setup(m => m.Pubs).Returns(new List<Pub> {
-            //new Pub { Name = "The Vine", Rating = 3.5 },
-            //new Pub { Name = "Ape and Apple", Rating = 3 },
-            //new Pub { Name = "The Dockyard", Rating = 4 }
-            //});
-
-            //kernel.Bind<IPubRepository>().ToConstant(mock.Object);
         }
     }
 }

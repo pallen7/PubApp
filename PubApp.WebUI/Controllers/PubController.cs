@@ -13,12 +13,10 @@ namespace PubApp.WebUI.Controllers
     {
         private IPubRepository repository;
         public int PageSize = 2;
-        
         public PubController(IPubRepository pubRepository)
         {
             this.repository = pubRepository;
         }
-
         public ViewResult List(int page = 1)
         {
             PubsListViewModel model = new PubsListViewModel
@@ -34,7 +32,6 @@ namespace PubApp.WebUI.Controllers
                     TotalItems = repository.Pubs.Count()
                 }
             };
-
             return View(model);
         }
     }
