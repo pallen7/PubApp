@@ -17,11 +17,12 @@ namespace PubApp.WebUI.Controllers
         {
             this.repository = pubRepository;
         }
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category, int page = 1)
         {
             PubsListViewModel model = new PubsListViewModel
             {
                 Pubs = repository.Pubs
+                .Where(p => p.Category == null || p.Category == category)
                 .OrderBy(p => p.PubId)
                 .Skip((page - 1) * PageSize)
                 .Take(PageSize),
