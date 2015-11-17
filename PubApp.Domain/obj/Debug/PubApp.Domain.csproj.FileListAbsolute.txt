@@ -43,3 +43,4 @@ C:\Development\PubApp\PubApp.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\Development\PubApp\PubApp.Domain\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Development\PubApp\PubApp.Domain\obj\Debug\PubApp.Domain.dll
 C:\Development\PubApp\PubApp.Domain\obj\Debug\PubApp.Domain.pdb
+C:\Development\PubApp\PubApp.Domain\obj\Debug\PubApp.Domain.csprojResolveAssemblyReference.cache

@@ -11,5 +11,6 @@ namespace PubApp.WebUI.Models
     {
         public IEnumerable<Pub> Pubs { get; set; }
         public PagingInfo PagingInfo { get; set; }
+        public string CurrentCategory { get; set; }
     }
 }
