@@ -22,7 +22,7 @@ namespace PubApp.WebUI.Controllers
             PubsListViewModel model = new PubsListViewModel
             {
                 Pubs = repository.Pubs
-                .Where(p => p.Category == null || p.Category == category)
+                .Where(p => category == null || p.Category == category)
                 .OrderBy(p => p.PubId)
                 .Skip((page - 1) * PageSize)
                 .Take(PageSize),
@@ -31,7 +31,8 @@ namespace PubApp.WebUI.Controllers
                     CurrentPage = page,
                     ItemsPerPage = PageSize,
                     TotalItems = repository.Pubs.Count()
-                }
+                },
+                CurrentCategory = category
             };
             return View(model);
         }

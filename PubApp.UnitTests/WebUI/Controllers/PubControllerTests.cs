@@ -33,7 +33,7 @@ namespace PubApp.UnitTests.WebUI.Controllers
             PubController controller = new PubController(mock.Object);
             controller.PageSize = 3;
 
-            PubsListViewModel result = (PubsListViewModel)controller.List(2).Model;
+            PubsListViewModel result = (PubsListViewModel)controller.List(null, 2).Model;
 
             Pub[] pubArray = result.Pubs.ToArray();
 
@@ -78,7 +78,7 @@ namespace PubApp.UnitTests.WebUI.Controllers
 
             PubController controller = new PubController(mock.Object);
 
-            PubsListViewModel result = (PubsListViewModel)controller.List(2).Model;
+            PubsListViewModel result = (PubsListViewModel)controller.List(null, 2).Model;
 
             PagingInfo pageInfo = result.PagingInfo;
             Assert.AreEqual(pageInfo.CurrentPage, 2, "CurrentPage");
