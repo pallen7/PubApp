@@ -1,0 +1,13 @@
+﻿@model PubApp.Domain.Entities.Pub
+<div class="well">
+    <h3>
+        <strong>@Model.Name</strong>
+    </h3>
+
+    <span class="pull-left">Category: @Model.Category</span>
+    <span class="pull-right label-info">Rating: @Model.Rating.ToString()</span>
+    <br />
+    <p class="lead">@Model.Description</p>
+    <br />
+</div>
+
